@@ -2,7 +2,7 @@
 
 - 코더 : 김찬중
 - 네비게이터 : 박준, 전휘호
-- 리뷰어 : 
+- 리뷰어 : 강다은
 
 
 
@@ -13,6 +13,23 @@
     - 문제를 해결하는 완성된 코드란 프로젝트 루브릭 3개 중 2개, 
     퀘스트 문제 요구조건 등을 지칭
         - 해당 조건을 만족하는 부분의 코드 및 결과물을 근거로 첨부
+      
+         <br/>
+
+        >노드에서 학습한 다양한 학습 모델 및 학습 실험 전략들을 활용하여, Kaggle 문제를 풀이하기 위한 코드를 완성하였습니다. 문제 풀이("price" 예측값) 결과를 제출하고 루브릭 기준에 해당하는 11만점 이하의 성능을 달성하였습니다. 또한 제출 결과 및 점수를 그림 파일로 첨부하였습니다.
+        ```
+        y_pred = AveragingBlending(models, X, y, test_data)
+        ```
+        
+        ```
+        submission_path = data_dir + "/sample_submission.csv"
+        submission = pd.read_csv(submission_path)
+        submission["price"] = predictions
+        submission_csv_path = "{}/submission_{}_RMSLE_{}.csv".format(data_dir, "ensemble", 1)
+        submission.to_csv(submission_csv_path, index=False)
+        ```
+        <br/>
+        
     
 - [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?** 
@@ -58,9 +75,23 @@
     - 문제에서 요구하는 조건에 더해 추가적으로 수행한 나만의 시도, 
     실험이 기록되어 있는지 확인
         - 잘 작성되었다고 생각되는 부분을 근거로 첨부합니다.
-      
      
+        <br/>
         
+      >기존의 예시 코드(baseline) 에서 제안한 학습 모델들의 성능을 평가하였고, 더욱 향상된 학습 모델을 구현하기 위해 새로운 시도를 하였습니다. <br/> 특히 grid search 및 averaging blending 을 사용하여, 다양한 parameter values 를 가진 여러 개의 model instances 를 생성하고 각각의 예측 결과를 조합함으로써 최상의 학습 성능을 유도한 것이 매우 인상깊습니다.
+      
+        ```
+        models = [
+            {"model": xgb, "name": "XGBoost"},
+            {"model": lgbm, "name": "LightGBM"},
+            {"model": lgbm2, "name": "LightGBM2"},
+            {"model": lgbm3, "name": "LightGBM3"},
+            {"model": lgbm4, "name": "LightGBM4"},
+            {"model": lgbm5, "name": "LightGBM5"},
+        ]
+        ```
+        <br/>
+      
         
 - [x]  **4. 회고를 잘 작성했나요?** 
     - 주어진 문제를 해결하는 완성된 코드 내지 프로젝트 결과물에 대해
