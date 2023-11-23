@@ -36,7 +36,8 @@
 
 생겼던 문제들과 해결 해보려는 시도에 대해 설명이 되어 있었고 본인이 시도했던 기록들이 남아있었다. 
 
-<img width="319" alt="스크린샷 2023-11-23 12 49 34" src="https://github.com/Bitna0403/Aiffel_Quest1/assets/100587126/727a4f4a-6990-499a-8dc0-e25a66f7b54f">
+
+<img width="319" alt="스크린샷 2023-11-23 12 49 34" src="https://github.com/Bitna0403/Aiffel_Quest1/assets/100587126/bb8758b1-a5ae-472a-8b2c-36b7d735588b">
 
 
        
