@@ -1,5 +1,6 @@
 # AIFFEL Campus Online Code Peer Review Templete
 - 코더 : 윤지영
+- 네비게이터 : 김찬중
 - 리뷰어 :
 
 
